@@ -23,7 +23,7 @@ function ServiceCard({
       viewport={{ once: true, amount: 0.15 }}
       transition={{ delay: index * 0.08, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
       onClick={onClick}
-      className="relative h-full flex flex-col justify-between rounded-2xl border border-[#1a1a1a] bg-[#0d0d0d] p-8 cursor-pointer group transition-all duration-300 hover:border-[#ffd600]/40 hover:bg-[#0e0e0b] hover:shadow-[0_0_40px_rgba(255,214,0,0.07)]"
+      className="relative h-full flex flex-col justify-between rounded-2xl border border-[#1a1a1a] bg-[#0d0d0d] p-8 cursor-pointer group transition-[border-color,background-color,box-shadow] duration-300 hover:border-[#ffd600]/40 hover:bg-[#0e0e0b] hover:shadow-[0_0_40px_rgba(255,214,0,0.07)]"
     >
       {/* Icon */}
       <div className="w-10 h-10 rounded-lg bg-[#1a1a1a] flex items-center justify-center mb-6">

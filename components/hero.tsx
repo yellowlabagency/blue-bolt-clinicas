@@ -23,22 +23,24 @@ export function Hero() {
         <div className="absolute top-0 left-0 right-0 h-64 overflow-hidden">
           {/* Left beam */}
           <motion.div
-            initial={{ width: "10rem" }}
-            animate={{ width: "28rem" }}
+            initial={{ scaleX: 10 / 28 }}
+            animate={{ scaleX: 1 }}
             transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="absolute top-0 right-1/2 h-64"
             style={{
+              width: "28rem",
               background: "conic-gradient(from 285deg, transparent 0deg, rgba(255,214,0,0.6) 30deg, transparent 60deg)",
               transformOrigin: "right top",
             }}
           />
           {/* Right beam */}
           <motion.div
-            initial={{ width: "10rem" }}
-            animate={{ width: "28rem" }}
+            initial={{ scaleX: 10 / 28 }}
+            animate={{ scaleX: 1 }}
             transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="absolute top-0 left-1/2 h-64"
             style={{
+              width: "28rem",
               background: "conic-gradient(from 75deg, transparent 0deg, rgba(255,214,0,0.6) 30deg, transparent 60deg)",
               transformOrigin: "left top",
             }}

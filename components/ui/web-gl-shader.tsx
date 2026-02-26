@@ -8,7 +8,7 @@ export function WebGLShader() {
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
-    const gl = canvas.getContext("webgl", { alpha: false, antialias: false, premultipliedAlpha: false })
+    const gl = canvas.getContext("webgl", { alpha: true, antialias: false })
     if (!gl) return
 
     const vertSrc = `
@@ -16,7 +16,7 @@ export function WebGLShader() {
       void main() { gl_Position = vec4(a_pos, 0.0, 1.0); }
     `
     const fragSrc = `
-      precision mediump float;
+      precision highp float;
       uniform vec2 u_res;
       uniform float u_time;
 
@@ -68,12 +68,11 @@ export function WebGLShader() {
     const uRes = gl.getUniformLocation(program, "u_res")
     const uTime = gl.getUniformLocation(program, "u_time")
 
-    const SCALE = 0.5
     let time = 0
 
     const resize = () => {
-      const w = Math.floor(window.innerWidth * SCALE)
-      const h = Math.floor(window.innerHeight * SCALE)
+      const w = canvas.offsetWidth
+      const h = canvas.offsetHeight
       canvas.width = w
       canvas.height = h
       gl.viewport(0, 0, w, h)
@@ -102,8 +101,8 @@ export function WebGLShader() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute inset-0 pointer-events-none"
-      style={{ display: "block", width: "100%", height: "100%" }}
+      className="absolute inset-0 w-full h-full block pointer-events-none"
+      style={{ willChange: "transform" }}
     />
   )
 }

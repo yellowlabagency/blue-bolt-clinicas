@@ -5,8 +5,6 @@ import { motion } from "framer-motion"
 import type { ServiceData } from "@/lib/types"
 import { SERVICES_COMUNICACAO, SERVICES_TECH } from "@/lib/services-data"
 import { ServiceDrawer } from "./service-drawer"
-import { GlowingEffect } from "@/components/ui/glowing-effect"
-
 function ServiceCard({
   service,
   index,
@@ -24,18 +22,9 @@ function ServiceCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
       transition={{ delay: index * 0.08, duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ scale: 1.02 }}
       onClick={onClick}
-      className="relative h-full flex flex-col justify-between rounded-2xl border border-[#1a1a1a] bg-[#0d0d0d] p-8 cursor-pointer group transition-colors hover:border-[#ffd600]/20"
+      className="relative h-full flex flex-col justify-between rounded-2xl border border-[#1a1a1a] bg-[#0d0d0d] p-8 cursor-pointer group transition-all duration-300 hover:border-[#ffd600]/40 hover:bg-[#0e0e0b] hover:shadow-[0_0_40px_rgba(255,214,0,0.07)]"
     >
-      <GlowingEffect
-        spread={40}
-        glow={true}
-        disabled={false}
-        proximity={64}
-        inactiveZone={0.01}
-        borderWidth={2}
-      />
       {/* Icon */}
       <div className="w-10 h-10 rounded-lg bg-[#1a1a1a] flex items-center justify-center mb-6">
         <Icon className="w-5 h-5 text-[#ffffff]" />

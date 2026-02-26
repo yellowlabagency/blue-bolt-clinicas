@@ -28,21 +28,21 @@ export function Marquee() {
   return (
     <section className="py-5 border-y border-[#1a1a1a] overflow-hidden flex flex-col gap-4">
       {/* Linha 1 — uppercase, branco, separador amarelo */}
-      <div className="flex flex-nowrap gap-4 px-6 overflow-x-hidden">
+      <div className="flex justify-between items-center px-6">
         {ITEMS_ROW1.map((item, i) => (
-          <span key={i} className="flex items-center gap-4 shrink-0">
-            <span className="font-mono uppercase text-sm tracking-widest text-white">{item}</span>
+          <span key={i} className="flex items-center gap-3 shrink-0">
+            <span className="font-mono uppercase text-xs tracking-widest text-white">{item}</span>
             {i < ITEMS_ROW1.length - 1 && (
-              <span className="text-[#ffd600] text-sm">◆</span>
+              <span className="text-[#ffd600] text-xs">◆</span>
             )}
           </span>
         ))}
       </div>
-      {/* Linha 2 — capitalizado, amarelo/dourado suave, separador diferente */}
-      <div className="flex flex-nowrap gap-4 px-6 overflow-x-hidden">
+      {/* Linha 2 — capitalizado, amarelo/dourado suave */}
+      <div className="flex justify-between items-center px-6">
         {ITEMS_ROW2.map((item, i) => (
           <span key={i} className="flex items-center gap-3 shrink-0">
-            <span className="font-sans text-sm text-[#ffd600]/60 tracking-wide">{item}</span>
+            <span className="font-sans text-xs text-[#ffd600]/60 tracking-wide">{item}</span>
             {i < ITEMS_ROW2.length - 1 && (
               <span className="text-white/20 text-xs">—</span>
             )}

@@ -1,19 +1,19 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { ArrowUpRight } from "lucide-react"
 import { getWhatsAppLink } from "@/lib/whatsapp"
 
 const ITEMS = Array(8).fill("YELLOW LAB")
 
 function MarqueeRow({ direction }: { direction: "left" | "right" }) {
+  const animation =
+    direction === "left"
+      ? "footer-marquee-left 20s linear infinite"
+      : "footer-marquee-right 20s linear infinite"
+
   return (
     <div className="overflow-hidden leading-none">
-      <motion.div
-        animate={{ x: direction === "left" ? ["0%", "-50%"] : ["-50%", "0%"] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="flex whitespace-nowrap"
-      >
+      <div style={{ display: "flex", whiteSpace: "nowrap", animation }}>
         {[...ITEMS, ...ITEMS].map((text, i) => (
           <span
             key={i}
@@ -22,15 +22,12 @@ function MarqueeRow({ direction }: { direction: "left" | "right" }) {
             {text}
           </span>
         ))}
-      </motion.div>
+      </div>
     </div>
   )
 }
 
 function RotatingCircle() {
-  const R = 82
-  const CX = 100
-  const CY = 100
   const text = "FALAR COM O LAB • FALAR COM O LAB • "
 
   return (
@@ -40,11 +37,10 @@ function RotatingCircle() {
       rel="noopener noreferrer"
       className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-48 h-48 md:w-72 md:h-72 flex items-center justify-center group cursor-pointer"
     >
-      <motion.svg
+      <svg
         viewBox="0 0 200 200"
         className="absolute inset-0 w-full h-full"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+        style={{ animation: "footer-spin 14s linear infinite" }}
       >
         <defs>
           <path
@@ -53,22 +49,19 @@ function RotatingCircle() {
           />
         </defs>
         <circle
-          cx={CX}
-          cy={CY}
-          r={R}
+          cx={100}
+          cy={100}
+          r={82}
           fill="#000000"
           stroke="#ffffff"
           strokeWidth="1.5"
         />
-        <text
-          fill="white"
-          style={{ fontSize: "15px", letterSpacing: "3px" }}
-        >
+        <text fill="white" style={{ fontSize: "15px", letterSpacing: "3px" }}>
           <textPath href="#circlePath" startOffset="0%">
             {text}
           </textPath>
         </text>
-      </motion.svg>
+      </svg>
 
       <div className="relative z-10 flex items-center justify-center">
         <ArrowUpRight className="w-8 h-8 text-[#ffffff] group-hover:text-[#ffd600] transition-colors" />

@@ -85,6 +85,20 @@ html {
   }
 }
 
+@keyframes footer-marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes footer-marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes footer-spin {
+  to { transform: rotate(360deg); }
+}
+
 @keyframes marquee-left {
   0% {
     transform: translateX(0);

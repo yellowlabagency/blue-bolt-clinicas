@@ -1,36 +1,16 @@
-"use client"
-import { MeshGradient } from "@paper-design/shaders-react"
-
 export function MeshGradientBg() {
   return (
     <div
       style={{
         position: "absolute",
         inset: 0,
-        overflow: "hidden",
+        background: `
+          radial-gradient(ellipse 100% 70% at 10% 50%, rgba(255, 170, 0, 0.55) 0%, transparent 65%),
+          radial-gradient(ellipse 70% 90% at 80% 15%, rgba(204, 136, 0, 0.40) 0%, transparent 60%),
+          radial-gradient(ellipse 55% 55% at 55% 88%, rgba(255, 214, 0, 0.22) 0%, transparent 55%),
+          #060400
+        `,
       }}
-    >
-      <MeshGradient
-        style={{
-          width: "100%",
-          height: "100%",
-        }}
-        colors={["#ffd600", "#ffaa00", "#cc8800", "#2a1f00", "#1a1400", "#000000"]}
-        distortion={0.6}
-        swirl={0.4}
-        grainMixer={0}
-        grainOverlay={0}
-        speed={0.3}
-        offsetX={0.05}
-      />
-      <div
-        style={{
-          position: "absolute",
-          inset: 0,
-          background: "rgba(0,0,0,0.35)",
-          pointerEvents: "none",
-        }}
-      />
-    </div>
+    />
   )
 }

@@ -17,53 +17,6 @@ export function Hero() {
       {/* WEBGL SHADER — z-index 0, atrás de tudo */}
       <WebGLShader />
 
-      {/* LAMP EFFECT — opacity reduzida para não competir com o shader */}
-      <div className="absolute inset-0 pointer-events-none opacity-40">
-        {/* Beams */}
-        <div className="absolute top-0 left-0 right-0 h-64 overflow-hidden">
-          {/* Left beam */}
-          <motion.div
-            initial={{ scaleX: 10 / 28 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute top-0 right-1/2 h-64"
-            style={{
-              width: "28rem",
-              background: "conic-gradient(from 285deg, transparent 0deg, rgba(255,214,0,0.6) 30deg, transparent 60deg)",
-              transformOrigin: "right top",
-            }}
-          />
-          {/* Right beam */}
-          <motion.div
-            initial={{ scaleX: 10 / 28 }}
-            animate={{ scaleX: 1 }}
-            transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute top-0 left-1/2 h-64"
-            style={{
-              width: "28rem",
-              background: "conic-gradient(from 75deg, transparent 0deg, rgba(255,214,0,0.6) 30deg, transparent 60deg)",
-              transformOrigin: "left top",
-            }}
-          />
-          {/* Edge masks */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#000000] via-transparent to-[#000000]" />
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#000000] to-transparent" />
-        </div>
-
-        {/* Center glow */}
-        <div className="absolute top-0 left-0 right-0">
-          {/* Glow blob */}
-          <motion.div
-            initial={{ opacity: 0, width: "8rem" }}
-            animate={{ opacity: 0.35, width: "24rem" }}
-            transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 h-40 rounded-full bg-[#ffd600] blur-3xl"
-          />
-          {/* Black bleed to hide overflow */}
-          <div className="absolute top-16 left-0 right-0 h-40 bg-gradient-to-b from-[#000000]/80 to-transparent blur-xl" />
-        </div>
-      </div>
-
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-4">
         <h1 className="font-display leading-none text-center text-5xl sm:text-6xl md:text-8xl xl:text-[120px]">

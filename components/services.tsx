@@ -31,7 +31,7 @@ function ServiceCard({
       <GlowingEffect
         spread={40}
         glow={true}
-        disabled={false}
+        disabled={true}
         proximity={64}
         inactiveZone={0.01}
         borderWidth={2}

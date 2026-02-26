@@ -8,7 +8,7 @@ export function WebGLShader() {
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
-    const gl = canvas.getContext("webgl", { alpha: true, antialias: false })
+    const gl = canvas.getContext("webgl", { alpha: false, antialias: false, premultipliedAlpha: false })
     if (!gl) return
 
     const vertSrc = `
@@ -70,8 +70,6 @@ export function WebGLShader() {
 
     const SCALE = 0.5
     let time = 0
-    let lastTs = 0
-    const FPS_INTERVAL = 1000 / 30
 
     const resize = () => {
       const w = Math.floor(window.innerWidth * SCALE)
@@ -82,11 +80,9 @@ export function WebGLShader() {
       gl.uniform2f(uRes, w, h)
     }
 
-    const animate = (ts: number) => {
+    const animate = () => {
       animRef.current = requestAnimationFrame(animate)
-      if (ts - lastTs < FPS_INTERVAL) return
-      lastTs = ts
-      time += 0.016
+      time += 0.008
       gl.uniform1f(uTime, time)
       gl.drawArrays(gl.TRIANGLES, 0, 6)
     }

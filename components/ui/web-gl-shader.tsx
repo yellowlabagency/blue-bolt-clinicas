@@ -90,21 +90,31 @@ export function WebGLShader() {
       handleResize()
     }
 
-    const animate = () => {
-      if (refs.uniforms) refs.uniforms.time.value += 0.008
+    const TARGET_INTERVAL = 1000 / 30 // 30fps
+    let lastTime = 0
+
+    const animate = (time: number) => {
+      refs.animationId = requestAnimationFrame(animate)
+      if (time - lastTime < TARGET_INTERVAL) return
+      lastTime = time
+      if (refs.uniforms) refs.uniforms.time.value += 0.016
       if (refs.renderer && refs.scene && refs.camera)
         refs.renderer.render(refs.scene, refs.camera)
-      refs.animationId = requestAnimationFrame(animate)
     }
 
+    const SCALE = 0.5
     const handleResize = () => {
       if (!refs.renderer || !refs.uniforms) return
-      refs.renderer.setSize(window.innerWidth, window.innerHeight, false)
+      refs.renderer.setSize(
+        Math.floor(window.innerWidth * SCALE),
+        Math.floor(window.innerHeight * SCALE),
+        false
+      )
       refs.uniforms.resolution.value = [window.innerWidth, window.innerHeight]
     }
 
     initScene()
-    animate()
+    refs.animationId = requestAnimationFrame(animate)
     window.addEventListener("resize", handleResize)
 
     return () => {
@@ -119,5 +129,5 @@ export function WebGLShader() {
     }
   }, [])
 
-  return <canvas ref={canvasRef} className="absolute inset-0 w-full h-full pointer-events-none" style={{ display: "block" }} />
+  return <canvas ref={canvasRef} className="absolute inset-0 pointer-events-none" style={{ display: "block", width: "100%", height: "100%" }} />
 }

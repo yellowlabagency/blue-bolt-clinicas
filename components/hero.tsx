@@ -2,7 +2,12 @@
 
 import { motion } from "framer-motion"
 import { getWhatsAppLink } from "@/lib/whatsapp"
-import { WebGLShader } from "@/components/ui/web-gl-shader"
+import dynamic from "next/dynamic"
+
+const WebGLShader = dynamic(
+  () => import("@/components/ui/web-gl-shader").then(m => ({ default: m.WebGLShader })),
+  { ssr: false }
+)
 
 const HERO_LINES = [
   { text: "A VOZ DA", accent: false },

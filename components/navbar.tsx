@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import Image from "next/image"
 import gsap from "gsap"
 import { getWhatsAppLink } from "@/lib/whatsapp"
 
@@ -91,7 +92,7 @@ export function Navbar() {
         <div className="flex items-center justify-between px-6 md:px-16 h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center hover:opacity-80 transition-opacity">
-            <img src="/logo-blue-bolt.webp" alt="Blue Bolt" className="h-10 md:h-14 object-contain brightness-0 invert" />
+            <Image src="/logo-blue-bolt.webp" alt="Blue Bolt" width={160} height={56} className="h-10 md:h-14 w-auto object-contain brightness-0 invert" />
           </a>
 
           {/* Centered tag */}

@@ -60,7 +60,7 @@ export function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
           className="font-sans font-light text-white text-base md:text-xl max-w-2xl mx-auto mt-6 drop-shadow-lg"
         >
           Mais pacientes novos por semana. Menos dependência do passa-a-palavra. Sem precisares de perceber de marketing.

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion } from "framer-motion"
 
 const STATS = [
@@ -65,15 +66,19 @@ export function About() {
 
           {/* Logos de credenciais */}
           <div className="flex flex-wrap items-center gap-6 mt-10">
-            <img
+            <Image
               src="/google-partner.webp"
               alt="Google Partner"
-              className="h-16 object-contain opacity-80 hover:opacity-100 transition-opacity"
+              width={120}
+              height={64}
+              className="h-16 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
             />
-            <img
-              src="/selo-top5.png"
+            <Image
+              src="/selo-top5.webp"
               alt="Scoring TOP 5% Melhores PME Portugal 2025"
-              className="h-28 object-contain opacity-90 hover:opacity-100 transition-opacity"
+              width={112}
+              height={112}
+              className="h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
             />
           </div>
 

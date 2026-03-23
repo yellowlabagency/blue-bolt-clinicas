@@ -78,8 +78,6 @@ export default function RootLayout({
   return (
     <html lang="pt-PT" className={`${spaceGrotesk.variable} ${workSans.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
           rel="preload"
           href="/fonts/Tanker-Regular.woff2"

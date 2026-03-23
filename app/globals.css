@@ -16,8 +16,8 @@
   --color-bg: #000000;
   --color-surface: #0d0d0d;
   --color-border: #1a1a1a;
-  --color-accent: #ffd600;
-  --color-accent-dim: rgba(255, 214, 0, 0.08);
+  --color-accent: #1A56DB;
+  --color-accent-dim: rgba(26, 86, 219, 0.08);
   --color-text-primary: #ffffff;
   --color-text-secondary: rgba(255,255,255,0.75);
 
@@ -27,19 +27,19 @@
   --card-foreground: #ffffff;
   --popover: #0d0d0d;
   --popover-foreground: #ffffff;
-  --primary: #ffd600;
-  --primary-foreground: #000000;
+  --primary: #1A56DB;
+  --primary-foreground: #ffffff;
   --secondary: #1a1a1a;
   --secondary-foreground: #ffffff;
   --muted: #1a1a1a;
   --muted-foreground: rgba(255,255,255,0.75);
-  --accent: #ffd600;
-  --accent-foreground: #000000;
+  --accent: #1A56DB;
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: #ffffff;
   --border: #1a1a1a;
   --input: #1a1a1a;
-  --ring: #ffd600;
+  --ring: #1A56DB;
   --radius: 0.625rem;
 }
 

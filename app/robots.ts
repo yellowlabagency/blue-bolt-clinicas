@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://yellowlab.agency/sitemap.xml',
+    sitemap: 'https://bluebolt.agency/sitemap.xml',
   }
 }

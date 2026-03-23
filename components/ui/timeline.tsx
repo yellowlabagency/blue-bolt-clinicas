@@ -35,8 +35,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             <div className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 absolute left-3 w-10 rounded-full bg-[#000000] border border-[#1a1a1a] flex items-center justify-center">
                 <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#ffd600] opacity-50" />
-                  <span className="relative inline-flex h-3 w-3 rounded-full bg-[#ffd600]" />
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1A56DB] opacity-50" />
+                  <span className="relative inline-flex h-3 w-3 rounded-full bg-[#1A56DB]" />
                 </span>
               </div>
               <h3 className="hidden md:block text-8xl md:pl-20 font-display text-[#ffffff]/15 select-none">
@@ -59,7 +59,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         >
           <motion.div
             style={{ height: heightTransform, opacity: opacityTransform }}
-            className="absolute inset-x-0 top-0 w-[3px] bg-gradient-to-t from-[#ffd600] via-[#ffaa00] to-transparent rounded-full"
+            className="absolute inset-x-0 top-0 w-[3px] bg-gradient-to-t from-[#1A56DB] via-[#0A2A6E] to-transparent rounded-full"
           />
         </div>
       </div>

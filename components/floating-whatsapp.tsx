@@ -44,7 +44,7 @@ export function FloatingWhatsApp() {
                 transition={{ duration: 0.2 }}
                 className="font-mono text-xs bg-[#0d0d0d] text-[#ffffff] px-3 py-1 rounded-full whitespace-nowrap"
               >
-                Falar com o Lab
+                Diagnóstico Gratuito
               </motion.span>
             )}
           </AnimatePresence>
@@ -53,8 +53,8 @@ export function FloatingWhatsApp() {
             href={getWhatsAppLink()}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Falar com o Lab via WhatsApp"
-            className="w-14 h-14 rounded-full bg-[#ffd600] flex items-center justify-center shadow-lg shadow-[#ffd600]/30 hover:scale-110 hover:shadow-xl transition-all"
+            aria-label="Diagnóstico Gratuito via WhatsApp"
+            className="w-14 h-14 rounded-full bg-[#1A56DB] flex items-center justify-center shadow-lg shadow-[#1A56DB]/30 hover:scale-110 hover:shadow-xl transition-all"
           >
             <Player
               autoplay

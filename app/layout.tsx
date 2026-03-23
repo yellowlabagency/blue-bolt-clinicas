@@ -18,20 +18,21 @@ const workSans = Work_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://yellowlab.agency'),
+  metadataBase: new URL('https://bluebolt.agency'),
   title: {
-    default: 'Yellow Lab | Estratégia, Criação e Tecnologia',
-    template: '%s | Yellow Lab',
+    default: 'Blue Bolt | Mais Pacientes Novos para a Sua Clínica',
+    template: '%s | Blue Bolt',
   },
-  description: 'Agência criativa que une marketing estratégico com tecnologia e IA. Branding, conteúdo, social media, tráfego pago, web design, SaaS e agentes de IA.',
+  description: 'A Blue Bolt enche a agenda da sua clínica com pacientes novos — sem depender do passa-a-palavra. Google Partner certificada. Diagnóstico gratuito em 30 minutos.',
   keywords: [
-    'agência de marketing', 'marketing digital', 'branding', 'identidade visual',
-    'tráfego pago', 'social media', 'web design', 'desenvolvimento de sites',
-    'agentes de IA', 'automação', 'SaaS', 'estratégia digital', 'Yellow Lab',
+    'marketing digital clínicas Portugal', 'captação de pacientes', 'agenda cheia clínica',
+    'marketing clínica dentária', 'marketing saúde Portugal', 'pacientes novos clínica',
+    'Google Ads clínicas', 'SEO clínica dentária', 'Blue Bolt agency', 'crescimento clínica',
+    'marketing médico Portugal', 'visibilidade Google clínica',
   ],
-  authors: [{ name: 'Yellow Lab', url: 'https://yellowlab.agency' }],
-  creator: 'Yellow Lab',
-  publisher: 'Yellow Lab',
+  authors: [{ name: 'Blue Bolt', url: 'https://bluebolt.agency' }],
+  creator: 'Blue Bolt',
+  publisher: 'Blue Bolt',
   robots: {
     index: true,
     follow: true,
@@ -48,29 +49,20 @@ export const metadata: Metadata = {
     apple: '/favicon.png',
   },
   openGraph: {
-    title: 'Yellow Lab | Estratégia, Criação e Tecnologia',
-    description: 'Agência criativa que une marketing estratégico com tecnologia e IA. Branding, conteúdo, social media, tráfego pago, web design, SaaS e agentes de IA.',
-    url: 'https://yellowlab.agency',
-    siteName: 'Yellow Lab',
-    locale: 'pt_BR',
+    title: 'Blue Bolt | Mais Pacientes Novos para a Sua Clínica',
+    description: 'A Blue Bolt enche a agenda da sua clínica com pacientes novos — sem depender do passa-a-palavra. Google Partner certificada. Diagnóstico gratuito em 30 minutos.',
+    url: 'https://bluebolt.agency',
+    siteName: 'Blue Bolt',
+    locale: 'pt_PT',
     type: 'website',
-    images: [
-      {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Yellow Lab — Estratégia, Criação e Tecnologia',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Yellow Lab | Estratégia, Criação e Tecnologia',
-    description: 'Agência criativa que une marketing estratégico com tecnologia e IA.',
-    images: ['/og-image.png'],
+    title: 'Blue Bolt | Mais Pacientes Novos para a Sua Clínica',
+    description: 'A Blue Bolt enche a agenda da sua clínica — Google Partner certificada. Diagnóstico gratuito em 30 minutos.',
   },
   alternates: {
-    canonical: 'https://yellowlab.agency',
+    canonical: 'https://bluebolt.agency',
   },
 }
 
@@ -84,7 +76,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={`${spaceGrotesk.variable} ${workSans.variable}`}>
+    <html lang="pt-PT" className={`${spaceGrotesk.variable} ${workSans.variable}`}>
       <body className="font-sans antialiased bg-[#000000] text-[#ffffff]">
         {children}
         <Analytics />

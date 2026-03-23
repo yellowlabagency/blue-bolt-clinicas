@@ -1,12 +1,12 @@
 const ROW1 = [
-  "ESTRATÉGIA", "BRANDING", "CONTEÚDO", "SOCIAL MEDIA", "TRÁFEGO PAGO",
-  "WEB DESIGN", "SAAS & APPS", "AGENTES DE IA", "AUTOMAÇÃO", "INTEGRAÇÕES",
+  "AGENDA MAIS CHEIA", "MAIS PACIENTES NOVOS", "CLÍNICA NO TOPO DO GOOGLE", "CRESCIMENTO PREVISÍVEL",
+  "MENOS DEPENDÊNCIA DO PASSA-A-PALAVRA", "FUNIL QUE TRABALHA ENQUANTO OPERAS",
 ]
 
 const ROW2 = [
-  "Identidade Visual", "Gestão de Tráfego", "Produção de Conteúdo", "Automação com IA",
-  "Desenvolvimento Web", "Social Media", "Consultoria Estratégica", "SaaS Personalizado",
-  "Integrações & APIs", "Agentes de IA",
+  "DIAGNÓSTICO", "ESTRATÉGIA", "RESULTADO",
+  "DIAGNÓSTICO", "ESTRATÉGIA", "RESULTADO",
+  "DIAGNÓSTICO", "ESTRATÉGIA", "RESULTADO",
 ]
 
 export function Marquee() {
@@ -24,7 +24,7 @@ export function Marquee() {
           {[...ROW1, ...ROW1].map((item, i) => (
             <span key={i} className="inline-flex items-center gap-3 px-4">
               <span className="font-mono uppercase text-xs tracking-[0.15em] text-white">{item}</span>
-              <span className="text-[#ffd600]/50 text-[10px]">◆</span>
+              <span className="text-[#1A56DB]/50 text-[10px]">◆</span>
             </span>
           ))}
         </div>
@@ -36,7 +36,7 @@ export function Marquee() {
           {[...ROW2, ...ROW2].map((item, i) => (
             <span key={i} className="inline-flex items-center gap-3 px-4">
               <span className="font-mono uppercase text-xs tracking-[0.15em] text-white/45">{item}</span>
-              <span className="text-[#ffd600]/25 text-[10px]">◆</span>
+              <span className="text-[#1A56DB]/25 text-[10px]">◆</span>
             </span>
           ))}
         </div>

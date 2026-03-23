@@ -3,7 +3,7 @@
 import { ArrowUpRight } from "lucide-react"
 import { getWhatsAppLink } from "@/lib/whatsapp"
 
-const ITEMS = Array(8).fill("YELLOW LAB")
+const ITEMS = Array(8).fill("BLUE BOLT")
 
 function MarqueeRow({ direction }: { direction: "left" | "right" }) {
   const animation =
@@ -12,7 +12,7 @@ function MarqueeRow({ direction }: { direction: "left" | "right" }) {
       : "footer-marquee-right 20s linear infinite"
 
   return (
-    <div className="overflow-hidden leading-none">
+    <div className="overflow-hidden py-4">
       <div style={{ display: "flex", whiteSpace: "nowrap", animation }}>
         {[...ITEMS, ...ITEMS].map((text, i) => (
           <span
@@ -28,7 +28,7 @@ function MarqueeRow({ direction }: { direction: "left" | "right" }) {
 }
 
 function RotatingCircle() {
-  const text = "FALAR COM O LAB • FALAR COM O LAB • "
+  const text = "DIAGNÓSTICO GRATUITO • DIAGNÓSTICO GRATUITO • "
 
   return (
     <a
@@ -56,7 +56,7 @@ function RotatingCircle() {
           stroke="#ffffff"
           strokeWidth="1.5"
         />
-        <text fill="white" style={{ fontSize: "15px", letterSpacing: "3px" }}>
+        <text fill="white" style={{ fontSize: "12px", letterSpacing: "2.5px" }}>
           <textPath href="#circlePath" startOffset="0%">
             {text}
           </textPath>
@@ -64,7 +64,7 @@ function RotatingCircle() {
       </svg>
 
       <div className="relative z-10 flex items-center justify-center">
-        <ArrowUpRight className="w-8 h-8 text-[#ffffff] group-hover:text-[#ffd600] transition-colors" />
+        <ArrowUpRight className="w-8 h-8 text-[#ffffff] group-hover:text-[#1A56DB] transition-colors" />
       </div>
     </a>
   )
@@ -83,23 +83,23 @@ export function Footer() {
         <div className="flex flex-col gap-8 md:hidden">
           <div className="flex flex-col items-center gap-3">
             <p className="font-mono text-xs uppercase tracking-widest text-white/70">
-              TEM UM PROJETO EM MENTE?
+              PRONTO PARA ENCHER A AGENDA?
             </p>
             <a
               href={getWhatsAppLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-fit items-center font-mono text-xs uppercase tracking-widest text-white border border-white/40 rounded-full px-5 py-2 hover:border-[#ffd600] hover:text-[#ffd600] transition-colors"
+              className="inline-flex w-fit items-center font-mono text-xs uppercase tracking-widest text-white border border-white/40 rounded-full px-5 py-2 hover:border-[#1A56DB] hover:text-[#1A56DB] transition-colors"
             >
-              FALAR COM O LAB
+              DIAGNÓSTICO GRATUITO
             </a>
           </div>
           <div className="flex items-center justify-between w-full">
             <div className="flex items-center gap-6">
-              <a href="https://instagram.com/yellowlab.agency" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-white/70 hover:text-[#ffd600] transition-colors">INSTAGRAM</a>
-              <a href="https://www.linkedin.com/company/yellowlabagency/about/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-white/70 hover:text-[#ffd600] transition-colors">LINKEDIN</a>
+              <a href="https://instagram.com/bluebolt.agency" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-white/70 hover:text-[#1A56DB] transition-colors">INSTAGRAM</a>
+              <a href="https://linkedin.com/company/bluebolt" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-white/70 hover:text-[#1A56DB] transition-colors">LINKEDIN</a>
             </div>
-            <button onClick={scrollToTop} className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-white/70 hover:text-[#ffd600] transition-colors">
+            <button onClick={scrollToTop} className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-white/70 hover:text-[#1A56DB] transition-colors">
               VOLTAR AO TOPO
               <ArrowUpRight className="w-3 h-3" />
             </button>
@@ -109,17 +109,17 @@ export function Footer() {
         {/* Desktop layout */}
         <div className="hidden md:grid grid-cols-3 items-center">
           <div className="flex flex-row items-center gap-4">
-            <p className="font-mono text-xs uppercase tracking-widest text-white/70">TEM UM PROJETO EM MENTE?</p>
-            <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center font-mono text-xs uppercase tracking-widest text-white border border-white/40 rounded-full px-5 py-2 hover:border-[#ffd600] hover:text-[#ffd600] transition-colors">
-              FALAR COM O LAB
+            <p className="font-mono text-xs uppercase tracking-widest text-white/70">PRONTO PARA ENCHER A AGENDA?</p>
+            <a href={getWhatsAppLink()} target="_blank" rel="noopener noreferrer" className="inline-flex w-fit items-center font-mono text-xs uppercase tracking-widest text-white border border-white/40 rounded-full px-5 py-2 hover:border-[#1A56DB] hover:text-[#1A56DB] transition-colors">
+              DIAGNÓSTICO GRATUITO
             </a>
           </div>
           <div className="flex items-center justify-center gap-8">
-            <a href="https://instagram.com/yellowlab.agency" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-white/70 hover:text-[#ffd600] transition-colors">INSTAGRAM</a>
-            <a href="https://www.linkedin.com/company/yellowlabagency/about/" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-white/70 hover:text-[#ffd600] transition-colors">LINKEDIN</a>
+            <a href="https://instagram.com/bluebolt.agency" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-white/70 hover:text-[#1A56DB] transition-colors">INSTAGRAM</a>
+            <a href="https://linkedin.com/company/bluebolt" target="_blank" rel="noopener noreferrer" className="font-mono text-xs uppercase tracking-widest text-white/70 hover:text-[#1A56DB] transition-colors">LINKEDIN</a>
           </div>
           <div className="flex justify-end">
-            <button onClick={scrollToTop} className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-white/70 hover:text-[#ffd600] transition-colors group">
+            <button onClick={scrollToTop} className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-white/70 hover:text-[#1A56DB] transition-colors group">
               VOLTAR AO TOPO
               <ArrowUpRight className="w-3 h-3 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
             </button>
@@ -136,10 +136,17 @@ export function Footer() {
       </div>
 
       {/* BARRA INFERIOR */}
-      <div className="px-6 md:px-16 py-6 flex items-center justify-center border-t border-[#1a1a1a]">
+      <div className="px-6 md:px-16 py-6 flex items-center justify-center gap-6 border-t border-[#1a1a1a]">
         <p className="font-mono text-xs uppercase tracking-widest text-white/40">
-          © 2026 YELLOW LAB
+          © 2026 BLUE BOLT
         </p>
+        <span className="text-white/20">·</span>
+        <a
+          href="tel:+351927135702"
+          className="font-mono text-xs uppercase tracking-widest text-white/40 hover:text-[#1A56DB] transition-colors"
+        >
+          +351 927 135 702
+        </a>
       </div>
 
     </footer>

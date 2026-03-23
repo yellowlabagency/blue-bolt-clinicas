@@ -62,7 +62,7 @@ export function CustomCursor() {
         translateY: "-50%",
         width: hovering ? 36 : 12,
         height: hovering ? 36 : 12,
-        backgroundColor: hovering ? "#ffd600" : "#ffffff",
+        backgroundColor: hovering ? "#1A56DB" : "#ffffff",
         mixBlendMode: hovering ? "difference" : "normal",
         opacity: visible ? 1 : 0,
         visibility: visible ? "visible" : "hidden",

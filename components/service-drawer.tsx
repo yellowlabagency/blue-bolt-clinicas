@@ -38,12 +38,12 @@ export function ServiceDrawer({ service, onClose }: ServiceDrawerProps) {
           >
             {/* Top row */}
             <div className="flex justify-between items-start mb-12">
-              <span className="font-mono text-xs uppercase tracking-widest text-[#ffd600] border border-[#ffd600]/30 rounded-full px-4 py-1">
+              <span className="font-mono text-xs uppercase tracking-widest text-[#1A56DB] border border-[#1A56DB]/30 rounded-full px-4 py-1">
                 {service.category}
               </span>
               <button
                 onClick={onClose}
-                className="font-mono text-xs uppercase tracking-widest text-white hover:text-[#ffd600] transition-colors cursor-pointer"
+                className="font-mono text-xs uppercase tracking-widest text-white hover:text-[#1A56DB] transition-colors cursor-pointer"
                 aria-label="Fechar"
               >
                 ESC
@@ -57,7 +57,7 @@ export function ServiceDrawer({ service, onClose }: ServiceDrawerProps) {
               transition={{ delay: 0.2, duration: 0.4, ease: EASE_POWER4_OUT }}
               className="w-16 h-16 rounded-2xl bg-[#1a1a1a] flex items-center justify-center mb-8"
             >
-              <service.icon className="w-8 h-8 text-[#ffd600]" />
+              <service.icon className="w-8 h-8 text-[#1A56DB]" />
             </motion.div>
 
             {/* Headline */}
@@ -100,7 +100,7 @@ export function ServiceDrawer({ service, onClose }: ServiceDrawerProps) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.38 + i * 0.06, duration: 0.35, ease: EASE_POWER4_OUT }}
                   >
-                    <span className="text-[#ffd600] text-sm shrink-0">{"◆"}</span>
+                    <span className="text-[#1A56DB] text-sm shrink-0">{"◆"}</span>
                     <span className="font-sans text-white text-sm">{item}</span>
                   </motion.div>
                 ))}
@@ -117,16 +117,16 @@ export function ServiceDrawer({ service, onClose }: ServiceDrawerProps) {
               className="pt-8"
             >
               <p className="font-sans text-white text-sm mb-6">
-                {"Pronto para começar? Fale diretamente com o time."}
+                {"Pronto para começar? Fala directamente com a equipa."}
               </p>
               <a
                 href={getWhatsAppLink(service.whatsappMessage)}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-3 font-mono font-semibold text-lg bg-[#ffd600] text-[#000000] rounded-full py-5 hover:brightness-110 hover:scale-105 transition-all"
+                className="w-full flex items-center justify-center gap-3 font-mono font-semibold text-lg bg-[#1A56DB] text-[#ffffff] rounded-full py-5 hover:bg-[#0A2A6E] hover:scale-105 transition-all"
               >
                 <MessageCircle className="w-5 h-5" />
-                {"FALAR COM O LAB →"}
+                {"DIAGNÓSTICO GRATUITO →"}
               </a>
             </motion.div>
           </motion.div>

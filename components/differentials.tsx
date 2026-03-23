@@ -8,17 +8,14 @@ const PROCESS_DATA = [
     title: "01",
     content: (
       <div className="mb-2">
-        <p className="font-mono text-xs uppercase tracking-widest text-[#ffd600] mb-3">
-          CONSULTORIA
+        <p className="font-mono text-xs uppercase tracking-widest text-[#1A56DB] mb-3">
+          01 — DIAGNÓSTICO
         </p>
         <h3 className="font-display text-3xl md:text-4xl text-[#ffffff] mb-4">
-          VAMOS NOS CONHECER
+          PERCEBEMOS O QUE ESTÁ A TRAVAR O CRESCIMENTO
         </h3>
         <p className="font-sans text-white text-base leading-relaxed max-w-xl">
-          Tudo começa com uma conversa honesta. Entendemos o seu negócio,
-          mapeamos oportunidades e definimos juntos o melhor caminho.
-          A Yellow Lab pode atuar como seu departamento de marketing completo
-          ou em projetos específicos. Você escolhe o formato que faz sentido.
+          Analisamos onde a tua clínica está a perder pacientes antes de chegarem à porta. Entregamos uma leitura honesta do que está a acontecer. Sem custo, sem compromisso.
         </p>
       </div>
     ),
@@ -27,16 +24,14 @@ const PROCESS_DATA = [
     title: "02",
     content: (
       <div className="mb-2">
-        <p className="font-mono text-xs uppercase tracking-widest text-[#ffd600] mb-3">
-          PLANEJAMENTO
+        <p className="font-mono text-xs uppercase tracking-widest text-[#1A56DB] mb-3">
+          02 — ESTRATÉGIA
         </p>
         <h3 className="font-display text-3xl md:text-4xl text-[#ffffff] mb-4">
-          180 DIAS DE ESTRATÉGIA
+          SABEMOS EXACTAMENTE O QUE FAZER A SEGUIR
         </h3>
         <p className="font-sans text-white text-base leading-relaxed max-w-xl">
-          A etapa mais importante e a que mais gente pula. Pesquisamos
-          o mercado, estudamos a concorrência e construímos uma estratégia
-          sólida para os próximos 180 dias. Sem achismo, sem improvisar.
+          Com base no diagnóstico, definimos as acções com maior impacto para o teu momento. Nada genérico. Nada que possa esperar.
         </p>
       </div>
     ),
@@ -45,16 +40,14 @@ const PROCESS_DATA = [
     title: "03",
     content: (
       <div className="mb-2">
-        <p className="font-mono text-xs uppercase tracking-widest text-[#ffd600] mb-3">
-          EXECUÇÃO
+        <p className="font-mono text-xs uppercase tracking-widest text-[#1A56DB] mb-3">
+          03 — EXECUÇÃO
         </p>
         <h3 className="font-display text-3xl md:text-4xl text-[#ffffff] mb-4">
-          ESTRATÉGIA VIRANDO REALIDADE
+          EM DUAS SEMANAS COMEÇAS A VER RESULTADOS
         </h3>
         <p className="font-sans text-white text-base leading-relaxed max-w-xl">
-          Aqui a estratégia vira realidade. Criação, tecnologia e distribuição
-          trabalhando juntas para entregar o que foi planejado, com qualidade
-          e no prazo.
+          O funil entra em campo. Pacientes novos começam a chegar. A agenda começa a preencher. Tu ficas nas consultas.
         </p>
       </div>
     ),
@@ -63,16 +56,14 @@ const PROCESS_DATA = [
     title: "04",
     content: (
       <div className="mb-2">
-        <p className="font-mono text-xs uppercase tracking-widest text-[#ffd600] mb-3">
-          ANÁLISE E AJUSTE
+        <p className="font-mono text-xs uppercase tracking-widest text-[#1A56DB] mb-3">
+          04 — CRESCIMENTO
         </p>
         <h3 className="font-display text-3xl md:text-4xl text-[#ffffff] mb-4">
-          DADOS QUE DIRECIONAM
+          CADA MÊS MELHOR QUE O ANTERIOR
         </h3>
         <p className="font-sans text-white text-base leading-relaxed max-w-xl">
-          Todo fim de mês, um relatório completo. Métricas não mentem:
-          elas mostram o que funciona e onde melhorar. O marketing muda
-          rápido e nós mudamos junto, sempre com os dados na frente.
+          Analisamos o que está a funcionar e amplificamos. O que pode melhorar, melhoramos. A clínica cresce com base sólida, não por sorte.
         </p>
       </div>
     ),
@@ -81,7 +72,7 @@ const PROCESS_DATA = [
 
 export function Differentials() {
   return (
-    <section className="bg-[#000000] pt-24 px-6 md:px-16">
+    <section id="como-funciona" className="bg-[#000000] pt-16 md:pt-24 px-6 md:px-16">
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -97,13 +88,13 @@ export function Differentials() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-        className="font-display text-5xl md:text-7xl leading-tight text-[#ffffff] mb-4"
+        className="font-display text-4xl md:text-7xl leading-tight text-[#ffffff] mb-4"
       >
-        <span className="block">O PROCESSO</span>
+        <span className="block">QUATRO PASSOS</span>
         <span className="block">
-          QUE <span className="text-[#ffd600]">ENTREGA</span>
+          ATÉ À <span className="text-[#1A56DB]">AGENDA</span>
         </span>
-        <span className="block">RESULTADO.</span>
+        <span className="block">MAIS CHEIA.</span>
       </motion.h2>
 
       <Timeline data={PROCESS_DATA} />

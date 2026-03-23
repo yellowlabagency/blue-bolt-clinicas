@@ -5,13 +5,16 @@ import gsap from "gsap"
 import { getWhatsAppLink } from "@/lib/whatsapp"
 
 const MENU_LINKS = [
-  { label: "SERVIÇOS", href: "#servicos" },
-  { label: "SOBRE", href: "#sobre" },
+  { label: "INÍCIO", href: "#" },
+  { label: "SOBRE NÓS", href: "#sobre" },
+  { label: "O QUE MUDA", href: "#servicos" },
+  { label: "COMO FUNCIONA", href: "#como-funciona" },
+  { label: "CONTACTO", href: "#contacto" },
 ]
 
 const SOCIAL_LINKS = [
-  { label: "Instagram", href: "https://instagram.com/yellowlab.agency" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/company/yellowlabagency/about/" },
+  { label: "Instagram", href: "https://instagram.com/bluebolt.agency" },
+  { label: "LinkedIn", href: "https://linkedin.com/company/bluebolt" },
 ]
 
 export function Navbar() {
@@ -87,8 +90,8 @@ export function Navbar() {
       }`}>
         <div className="flex items-center justify-between px-6 md:px-16 h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="font-display text-2xl md:text-3xl text-[#ffffff] tracking-tight hover:text-[#ffd600] transition-colors">
-            YELLOW LAB
+          <a href="#" className="flex items-center hover:opacity-80 transition-opacity">
+            <img src="/logo-blue-bolt.webp" alt="Blue Bolt" className="h-10 md:h-14 object-contain brightness-0 invert" />
           </a>
 
           {/* Centered tag */}
@@ -96,14 +99,14 @@ export function Navbar() {
             scrolled ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}>
             <span className="font-mono text-xs uppercase tracking-widest text-white">
-              ◆ ESTÚDIO CRIATIVO & TECNOLOGIA
+              ◆ MARKETING DIGITAL PARA CLÍNICAS
             </span>
           </div>
 
           {/* Menu button */}
           <button
             onClick={() => setIsOpen(prev => !prev)}
-            className="flex items-center gap-3 font-mono text-sm uppercase tracking-widest text-[#ffffff] hover:text-[#ffd600] transition-colors group"
+            className="flex items-center gap-3 font-mono text-sm uppercase tracking-widest text-[#ffffff] hover:text-[#1A56DB] transition-colors group"
           >
             <span>{isOpen ? "FECHAR" : "MENU"}</span>
             <div ref={iconRef} className="w-5 h-5 flex items-center justify-center">
@@ -133,11 +136,11 @@ export function Navbar() {
         {/* Header sidebar */}
         <div className="flex items-center justify-between mb-16">
           <span className="font-mono text-xs uppercase tracking-widest text-white">
-            ◆ YELLOW LAB
+            ◆ BLUE BOLT
           </span>
           <button
             onClick={closeMenu}
-            className="font-mono text-xs uppercase tracking-widest text-white hover:text-[#ffd600] transition-colors"
+            className="font-mono text-xs uppercase tracking-widest text-white hover:text-[#1A56DB] transition-colors"
           >
             ESC
           </button>
@@ -152,7 +155,7 @@ export function Navbar() {
                 <a
                   href={link.href}
                   onClick={closeMenu}
-                  className="block font-display text-6xl md:text-7xl text-[#ffffff] hover:text-[#ffd600] transition-colors leading-tight py-1"
+                  className="block font-display text-6xl md:text-7xl text-[#ffffff] hover:text-[#1A56DB] transition-colors leading-tight py-1"
                 >
                   {link.label}
                 </a>
@@ -167,9 +170,9 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={closeMenu}
-              className="inline-flex items-center gap-2 font-mono font-semibold text-sm bg-[#ffd600] text-[#000000] rounded-full px-8 py-4 hover:brightness-110 hover:scale-105 transition-all"
+              className="inline-flex items-center gap-2 font-mono font-semibold text-sm bg-[#1A56DB] text-[#ffffff] rounded-full px-8 py-4 hover:bg-[#0A2A6E] hover:scale-105 transition-all"
             >
-              FALAR COM O LAB →
+              DIAGNÓSTICO GRATUITO →
             </a>
           </div>
 
@@ -179,7 +182,7 @@ export function Navbar() {
               <a
                 key={s.label}
                 href={s.href}
-                className="font-mono text-xs uppercase tracking-widest text-white hover:text-[#ffd600] transition-colors"
+                className="font-mono text-xs uppercase tracking-widest text-white hover:text-[#1A56DB] transition-colors"
               >
                 {s.label}
               </a>
@@ -190,7 +193,7 @@ export function Navbar() {
         {/* Footer sidebar */}
         <div className="sidebar-extra mt-12 pt-8 border-t border-[#1a1a1a]">
           <p className="font-mono text-xs text-[#ffffff]/30 uppercase tracking-widest">
-            © 2026 YELLOW LAB
+            © 2026 BLUE BOLT
           </p>
         </div>
       </div>

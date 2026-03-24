@@ -18,7 +18,7 @@ const HERO_LINES = [
 export function Hero() {
   return (
     <section className="relative h-screen flex flex-col items-center justify-center overflow-hidden bg-[#000000]">
-      {/* WEBGL SHADER — z-index 0, atrás de tudo */}
+      {/* WEBGL SHADER - z-index 0, atrás de tudo */}
       <WebGLShader />
 
       {/* Content */}

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: 'Blue Bolt | Mais Pacientes Novos para a Sua Clínica',
     template: '%s | Blue Bolt',
   },
-  description: 'A Blue Bolt enche a agenda da sua clínica com pacientes novos — sem depender do passa-a-palavra. Google Partner certificada. Diagnóstico gratuito em 30 minutos.',
+  description: 'A Blue Bolt enche a agenda da sua clínica com pacientes novos, sem depender do passa-a-palavra. Google Partner certificada. Diagnóstico gratuito em 30 minutos.',
   keywords: [
     'marketing digital clínicas Portugal', 'captação de pacientes', 'agenda cheia clínica',
     'marketing clínica dentária', 'marketing saúde Portugal', 'pacientes novos clínica',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Blue Bolt | Mais Pacientes Novos para a Sua Clínica',
-    description: 'A Blue Bolt enche a agenda da sua clínica com pacientes novos — sem depender do passa-a-palavra. Google Partner certificada. Diagnóstico gratuito em 30 minutos.',
+    description: 'A Blue Bolt enche a agenda da sua clínica com pacientes novos, sem depender do passa-a-palavra. Google Partner certificada. Diagnóstico gratuito em 30 minutos.',
     url: 'https://bluebolt.agency',
     siteName: 'Blue Bolt',
     locale: 'pt_PT',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Blue Bolt | Mais Pacientes Novos para a Sua Clínica',
-    description: 'A Blue Bolt enche a agenda da sua clínica — Google Partner certificada. Diagnóstico gratuito em 30 minutos.',
+    description: 'A Blue Bolt enche a agenda da sua clínica. Google Partner certificada. Diagnóstico gratuito em 30 minutos.',
   },
   alternates: {
     canonical: 'https://bluebolt.agency',

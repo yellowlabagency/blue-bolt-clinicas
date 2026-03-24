@@ -18,7 +18,7 @@ export function Marquee() {
         WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)",
       }}
     >
-      {/* Linha 1 — rola esquerda */}
+      {/* Linha 1 - rola esquerda */}
       <div>
         <div style={{ display: "flex", whiteSpace: "nowrap", animation: "footer-marquee-left 28s linear infinite" }}>
           {[...ROW1, ...ROW1].map((item, i) => (
@@ -30,7 +30,7 @@ export function Marquee() {
         </div>
       </div>
 
-      {/* Linha 2 — rola direita, mesma fonte, menos brilho */}
+      {/* Linha 2 - rola direita, mesma fonte, menos brilho */}
       <div>
         <div style={{ display: "flex", whiteSpace: "nowrap", animation: "footer-marquee-right 28s linear infinite" }}>
           {[...ROW2, ...ROW2].map((item, i) => (

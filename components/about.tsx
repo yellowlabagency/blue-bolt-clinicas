@@ -12,7 +12,7 @@ const STATS = [
   {
     number: "TOP 5%",
     label: "PME PORTUGAL",
-    description: "Google Partner — entre as melhores agências do país",
+    description: "Google Partner, entre as melhores agências do país",
   },
   {
     number: "5M€+",

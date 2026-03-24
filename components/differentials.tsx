@@ -9,7 +9,7 @@ const PROCESS_DATA = [
     content: (
       <div className="mb-2">
         <p className="font-mono text-xs uppercase tracking-widest text-[#1A56DB] mb-3">
-          01 — DIAGNÓSTICO
+          01. DIAGNÓSTICO
         </p>
         <h3 className="font-display text-3xl md:text-4xl text-[#ffffff] mb-4">
           PERCEBEMOS O QUE ESTÁ A TRAVAR O CRESCIMENTO
@@ -25,7 +25,7 @@ const PROCESS_DATA = [
     content: (
       <div className="mb-2">
         <p className="font-mono text-xs uppercase tracking-widest text-[#1A56DB] mb-3">
-          02 — ESTRATÉGIA
+          02. ESTRATÉGIA
         </p>
         <h3 className="font-display text-3xl md:text-4xl text-[#ffffff] mb-4">
           SABEMOS EXACTAMENTE O QUE FAZER A SEGUIR
@@ -41,7 +41,7 @@ const PROCESS_DATA = [
     content: (
       <div className="mb-2">
         <p className="font-mono text-xs uppercase tracking-widest text-[#1A56DB] mb-3">
-          03 — EXECUÇÃO
+          03. EXECUÇÃO
         </p>
         <h3 className="font-display text-3xl md:text-4xl text-[#ffffff] mb-4">
           EM DUAS SEMANAS COMEÇAS A VER RESULTADOS
@@ -57,7 +57,7 @@ const PROCESS_DATA = [
     content: (
       <div className="mb-2">
         <p className="font-mono text-xs uppercase tracking-widest text-[#1A56DB] mb-3">
-          04 — CRESCIMENTO
+          04. CRESCIMENTO
         </p>
         <h3 className="font-display text-3xl md:text-4xl text-[#ffffff] mb-4">
           CADA MÊS MELHOR QUE O ANTERIOR
